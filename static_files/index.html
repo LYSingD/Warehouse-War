@@ -4,19 +4,19 @@
 		<meta charset="utf-8">
 		<meta HTTP-EQUIV="EXPIRES" CONTENT="-1">
 		<title>Computing Science 309 Warehouse Wars</title>
-		<script language="javascript" src="jquery-3.1.1.min.js" > </script>
-		<script language="javascript" src="jsgame/ww.js" > </script>
-		<script language="javascript" src="jsgame/levels.js" > </script>
-		<script language="javascript" src="jsgame/game.js" > </script>
-		<script language="javascript" src="jsgame/music.js" > </script>
-		<script language="javascript" src="jsgame/setupgame.js" > </script>
-		<script language="javascript" src="jsfunction/login.js"></script>
-		<script language="javascript" src="jsfunction/register.js"></script>
-		<script language="javascript" src="jsfunction/goback.js"></script>
-		<script language="javascript" src="jsfunction/create.js"></script>
-		<script language="javascript" src="jsfunction/message.js"></script>
-		<script language="javascript" src="jsfunction/updateScore.js"></script>
-
+		<script language="javascript" src="./src/jquery-3.1.1.min.js" > </script>
+		<script language="javascript" src="./src/jsgame/ww.js" > </script>
+		<script language="javascript" src="./src/jsgame/levels.js" > </script>
+		<script language="javascript" src="./src/jsgame/game.js" > </script>
+		<script language="javascript" src="./src/jsgame/music.js" > </script>
+		<script language="javascript" src="./src/jsgame/setupgame.js" > </script>
+		<script language="javascript" src="./src/jsfunction/login.js"></script>
+		<script language="javascript" src="./src/jsfunction/register.js"></script>
+		<script language="javascript" src="./src/jsfunction/goback.js"></script>
+		<script language="javascript" src="./src/jsfunction/create.js"></script>
+		<script language="javascript" src="./src/jsfunction/message.js"></script>
+		<script language="javascript" src="./src/jsfunction/updateScore.js"></script>
+        <link rel="stylesheet" type="text/css" href="./css/mystyle.css" />
 
 
 
@@ -60,152 +60,6 @@
 				});
 			});
 		</script>
-		<style>
-			/* style parts of the legend, the controls and the elements in the stage appropriately */
-
-			/* fill up tthe blank images */
-			body{
-				
-				background:url("wallpaper/war.jpg");
-				background-size: cover;
-				margin:0;
-				font-family: "Open Sans Condensed", sans-serif;
-			}
-
-			/*
-			* Form's css
-			*/
-			form {
-			  position: relative;
-			  width: 250px;
-			  margin: 0 auto;
-			  background: rgba(130,130,130,.3);
-			  padding: 20px 22px;
-			  border: 1px solid;
-			  border-top-color: rgba(255,255,255,.4);
-			  border-left-color: rgba(255,255,255,.4);
-			  border-bottom-color: rgba(60,60,60,.4);
-			  border-right-color: rgba(60,60,60,.4);
-			}
-			form input, form button {
-			  width: 212px;
-			  border: 1px solid;
-			  border-bottom-color: rgb(255,255,255);
-			  border-right-color: rgb(60,60,60);
-			  border-top-color: rgb(60,60,60);
-			  border-left-color: rgb(80,80,80);
-			  background-color: rgb(0,0,0);
-			  background-repeat: no-repeat;
-			  padding: 8px 24px 8px 10px;
-			  color: #fff;
-			  text-shadow: 0 1px 0 rgb(0,0,0);
-			  margin-bottom: 19px;
-			}
-			form button {
-			  width: 248px;
-			  margin-bottom: 0;
-			  color: white;
-			  text-transform: uppercase;
-			  background: #225556;
-			  border-top-color: #9fb5b5;
-			  border-left-color: #608586;
-			  border-bottom-color: #1b4849;
-			  border-right-color: #1e4d4e;
-			}
-			form button:hover {background-color: #8e3e8b}
-
-			form button:active {
-			  background-color: red;
-			}
-
-
-			/*
-			* Game table's css
-			*/
-			#game_table {
-				position:relative;
-				width: 100%;
-				height: 100%;
-				background:white;
-				border-collapse:collapse;
-			}
-			.row, .col {
-				border-collapse:collapse;
-				border:1px solid black;
-			}
-			.Monsters {
-			  animation: pulse 1s ease infinite;
-			  /* transition: transform 0.2s; */
-			}
-			@keyframes pulse{
-				0% {
-					transform: scale(1);
-				}
-				50% {
-				    transform: scale(1.2);
-				}
-
-				100% {
-				    transform: scale(1);
-				}
-			}
-
-
-			/*
-			* Html's css
-			*/
-			img{
-				width: 25px;
-				height: 25px; 
-				display: block;
-			}
-			.legend{
-				visibility: hidden;
-			}
-			.time{
-				color:white;
-				width:250px;
-				height:30px;
-				border: 3px solid black;
-				visibility: hidden;
-				margin-top:-0.7em;
-				padding:2px;
-				background: url("icons/clock.png") no-repeat;
-				background-color: #225556;
-				background-size: 30px 30px;
-				padding-left: 31px;
-
-			}
-			.controls, #pause, #resume, .score, #restart {
-				color:white;
-			    background-color: #225556;
-			    border: 3px solid black;
-			    visibility: hidden;
-			}
-			.button {
-			  padding: 10px 20px;
-			  color:white;
-			  background-color: #225556;
-			  border-radius: 15px;
-			  box-shadow: 0 3px #999;
-			}
-			.button:hover {background-color: #8e3e8b}
-
-			.button:active, .move:active {
-			  background-color: red;
-			}
-
-
-			#tutorial {
-				background-size: cover;
-				display:none;
-				position: fixed;
-				z-index:1;
-				padding-top:100px;
-				width:100%;
-				height:100%;
-			}
-		</style>
 
 
 	</head>
@@ -214,11 +68,11 @@
 			<h1>Warehouse Wars</h1>
 			<table class="legend">
 				<tr>
-					<td> <img src="icons/blank.gif" id="blankImage" /> </td>
-					<td> <img src="icons/emblem-package-2-24.png" id="boxImage" /> </td>
-					<td> <img src="icons/face-cool-24.png" id="playerImage" /> </td>
-					<td> <img src="icons/face-devil-grin-24.png" id="monsterImage" /> </td>
-					<td> <img src="icons/wall.jpeg" id="wallImage" /> </td>
+					<td> <img src="./src/icons/blank.gif" id="blankImage" /> </td>
+					<td> <img src="./src/icons/emblem-package-2-24.png" id="boxImage" /> </td>
+					<td> <img src="./src/icons/face-cool-24.png" id="playerImage" /> </td>
+					<td> <img src="./src/icons/face-devil-grin-24.png" id="monsterImage" /> </td>
+					<td> <img src="./src/icons/wall.jpeg" id="wallImage" /> </td>
 				</tr>
 			</table>
 			<table>
@@ -236,8 +90,8 @@
 								</form>
 						</div>
 						<audio id="myAudio" autoplay loop>
-							<source src="music/war.mp3" type="audio/mp3">
-							<source src="music/war.ogg" type="audio/ogg">
+							<source src="./src/music/war.mp3" type="audio/mp3">
+							<source src="./src/music/war.ogg" type="audio/ogg">
 						</audio>
 						
 						<p><button id="pause" onclick="pauseGame()">Pause Game</button>
@@ -250,8 +104,8 @@
 					
 					<div id="tutorial">
 					    <video id="tut_video" width="750" controls>
-					  			<source src="video/MVI_8623.mp4" type="video/mp4">
-					  			<source src="video/MVI_8623.ogg" type="video/ogg">
+					  			<source src="./src/video/MVI_8623.mp4" type="video/mp4">
+					  			<source src="./src/video/MVI_8623.ogg" type="video/ogg">
 						</video>
 					</div>
 						
@@ -260,19 +114,19 @@
 						<div class="score"></div>
 						<table class="controls" >
 								<tr>
-									<td><img src="icons/north_west.svg" class="move" onclick="stage.player_move(-1, -1);" /></td>
-									<td><img src="icons/north.svg" class="move"  onclick="stage.player_move(-1, 0);"/></td>
-									<td><img src="icons/north_east.svg" class="move"  onclick="stage.player_move(-1, 1);"/></td>
+									<td><img src="./src/icons/north_west.svg" class="move" onclick="stage.player_move(-1, -1);" /></td>
+									<td><img src="./src/icons/north.svg" class="move"  onclick="stage.player_move(-1, 0);"/></td>
+									<td><img src="./src/icons/north_east.svg" class="move"  onclick="stage.player_move(-1, 1);"/></td>
 								</tr>
 								<tr>
-									<td><img src="icons/west.svg" class="move" onclick="stage.player_move(0, -1);"/></td>
+									<td><img src="./src/icons/west.svg" class="move" onclick="stage.player_move(0, -1);"/></td>
 									<td>&nbsp;</td>
-									<td><img src="icons/east.svg" class="move" onclick="stage.player_move(0, 1);"/></td>
+									<td><img src="./src/icons/east.svg" class="move" onclick="stage.player_move(0, 1);"/></td>
 								</tr>
 								<tr>
-									<td><img src="icons/south_west.svg" class="move" onclick="stage.player_move(1, -1);"/></td>
-									<td><img src="icons/south.svg" class="move" onclick="stage.player_move(1, 0);"/></td>
-									<td><img src="icons/south_east.svg" class="move" onclick="stage.player_move(1, 1);"/></td>
+									<td><img src="./src/icons/south_west.svg" class="move" onclick="stage.player_move(1, -1);"/></td>
+									<td><img src="./src/icons/south.svg" class="move" onclick="stage.player_move(1, 0);"/></td>
+									<td><img src="./src/icons/south_east.svg" class="move" onclick="stage.player_move(1, 1);"/></td>
 								</tr>
 							</table>
 					</td>
