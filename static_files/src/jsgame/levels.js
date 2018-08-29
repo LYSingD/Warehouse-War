@@ -1,6 +1,6 @@
 function selectLevels(){
-	var form='<form id="portform">';
-	form+= '<p>Levels</p>';
+	var form='<form id="levelform">';
+	form+= '<p>LEVELS</p>';
 	form+='<p><button id="easy">Easy</button>';
 	form+='<p><button id="hard">Hard</button>';
 	form+='</form>'

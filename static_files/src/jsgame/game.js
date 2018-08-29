@@ -1,10 +1,5 @@
-function setupGame(x,y){
-	stage=new Stage(x,y,"stage");
-	stage.initialize();
-	startGame(time_mode, game_mode);
-}
-
 function startGame(time, mode){
+	console.log(1);
 	time_start = new Date();
 	time_mode = time;
 	game_mode = mode;
@@ -42,14 +37,19 @@ function endGame(win_lose){
 	document.removeEventListener("keydown", KeyDown, false);
 	if(win_lose == 0){ //Player win the game.
 		alert("You win!");
+		$("#pause").fadeOut();
+		$("#resume").fadeOut();
+		$("#restart").fadeIn();
+		$("#restart").css("visibility", "visible");
+		//update(stage.score);
 	}else{ //Player lose the game.
 		alert("You lose!");
+		$("#pause").fadeOut();
+		$("#resume").fadeOut();
+		$("#restart").fadeIn();
+		$("#restart").css("visibility", "visible");
+		//update(stage.score);
 	}
-	$("#pause").fadeOut();
-	$("#resume").fadeOut();
-	$("#restart").fadeIn();
-	$("#restart").css("visibility", "visible");
-	update(stage.score);
 }
 //Function that pauseGame
 function pauseGame(){
