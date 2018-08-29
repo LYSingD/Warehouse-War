@@ -1,0 +1,22 @@
+{
+  "name": "backendserver",
+  "version": "1.0.0",
+  "description": "serves the static content and runs a restful api for user managment, and allows users to advertise and pick worlds to join",
+  "main": "backend_server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "liyan23",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2",
+    "http": "0.0.0",
+    "passport": "^0.3.2",
+    "passport-http": "^0.3.0",
+    "pug": "^2.0.0-beta11",
+    "url": "^0.11.0",
+    "ws": "^2.2.2"
+  }
+}
