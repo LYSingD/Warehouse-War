@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta HTTP-EQUIV="EXPIRES" CONTENT="-1">
+		<title>Computing Science 309 Warehouse Wars</title>
+		<script language="javascript" src="src/jquery-3.1.1.min.js" > </script>
+		<script language="javascript" src="src/jsgame/ww.js" > </script>
+		<script language="javascript" src="src/jsgame/levels.js" > </script>
+		<script language="javascript" src="src/jsgame/ports.js" > </script>
+		<script language="javascript" src="src/jsgame/game.js" > </script>
+		<script language="javascript" src="src/jsgame/music.js" > </script>
+		<script language="javascript" src="src/jsfunction/login.js"></script>
+		<script language="javascript" src="src/jsfunction/register.js"></script>
+		<script language="javascript" src="src/jsfunction/goback.js"></script>
+		<script language="javascript" src="src/jsfunction/create.js"></script>
+		<script language="javascript" src="src/jsfunction/updateScore.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/mystyle.css" />
+
+		<script> 
+			var scorket; 
+			//Gobal variables
+			stage=null;
+			interval=null;
+			startTime = null;
+			time_mode = null;
+			game_mode = null;
+			t = null;
+
+			//Deal with the register page's goback function
+			loginhtml = null;
+			//To know the which user is playing.
+			session_user = null;
+			
+			$(function(){
+				$("#guest").click(function(e){
+					
+				});
+			});
+		</script>
+		
+
+
+	</head>
+	<body bgcolor="ffffff">
+		<center>
+			<h1>Warehouse Wars</h1>
+			<table class="legend">
+				<tr>
+					<td> <img src="src/icons/blank.gif" id="blankImage" /> </td>
+					<td> <img src="src/icons/emblem-package-2-24.png" id="boxImage" /> </td>
+					<td> <img src="src/icons/face-cool-24.png" id="playerImage" /> </td>
+					<td> <img src="src/icons/face-devil-grin-24.png" id="monsterImage" /> </td>
+					<td> <img src="src/icons/wall.jpeg" id="wallImage" /> </td>
+				</tr>
+			</table>
+			<table>
+				<tr>
+					<td>
+						<center><div class="time"></div></center>
+						<div id="stage">  
+								<form id="loginform">
+										<p> LOGIN </p>
+										<p><input type="text" id="username" placeholder="Username"> </p>
+										<p><input type="password" id="password" placeholder="Password"></input></p>
+										<p><button id="login" onclick="log('user')">Login</button></p>
+										<p><input type=button id="register" value = "Register" onclick="register_form()"></p>
+										<p><button id="guest" onclick="log('guest')">Guest (Play without Web)</button></p>
+								</form>
+						</div>
+						<audio id="myAudio" autoplay loop>
+							<source src="src/music/war.mp3" type="audio/mp3">
+							<source src="src/music/war.ogg" type="audio/ogg">
+						</audio>
+						
+						<p><button id="pause" onclick="pauseGame()">Pause Game</button>
+						<button id="resume" onclick="resumeGame()">Resume Game</button>
+						<button id="restart" onclick="restartGame()">Restart Game</button>
+						</p>
+						<p><button class="button" id="music" onclick="pauseMusic()">Disable Music</button>
+							<button class="button" id='tut' onclick="video()">Tutorial</button></p>
+					</td>
+					
+					<div id="tutorial">
+					    <video id="tut_video" width="750" controls>
+					  			<source src="src/video/MVI_8623.mp4" type="video/mp4">
+					  			<source src="src/video/MVI_8623.ogg" type="video/ogg">
+						</video>
+					</div>
+						
+					
+					<td>
+						<div class="score"></div>
+						<table class="controls" >
+								<tr>
+									<td><img src="src/icons/north_west.svg" class="move" onclick="stage.player_move(-1, -1);" /></td>
+									<td><img src="src/icons/north.svg" class="move"  onclick="stage.player_move(-1, 0);"/></td>
+									<td><img src="src/icons/north_east.svg" class="move"  onclick="stage.player_move(-1, 1);"/></td>
+								</tr>
+								<tr>
+									<td><img src="src/icons/west.svg" class="move" onclick="stage.player_move(0, -1);"/></td>
+									<td>&nbsp;</td>
+									<td><img src="src/icons/east.svg" class="move" onclick="stage.player_move(0, 1);"/></td>
+								</tr>
+								<tr>
+									<td><img src="src/icons/south_west.svg" class="move" onclick="stage.player_move(1, -1);"/></td>
+									<td><img src="src/icons/south.svg" class="move" onclick="stage.player_move(1, 0);"/></td>
+									<td><img src="src/icons/south_east.svg" class="move" onclick="stage.player_move(1, 1);"/></td>
+								</tr>
+							</table>
+					</td>
+
+				</tr>
+			</table>
+		</center>
+		<p id="response"><p>
+	</body>
+</html>
+
