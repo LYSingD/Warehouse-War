@@ -1,6 +1,8 @@
 # Warehouse-War
 Single web page based game called Warehouse Wars was built by Html, JavaScript, JQuery, Node.js, Express.js, MongoDB
 
+## Demo
+<img src="https://github.com/LYSingD/test/blob/master/images/demo.jpg">
 
 ### Prerequisites
 
@@ -25,6 +27,7 @@ End with an example of getting some data out of the system or using it for a lit
 * [NodeJS](https://nodejs.org)
 * [ExpressJS](https://expressjs.com)
 * [MongoDB](https://www.mongodb.com)
+
 
 ## Authors
 
