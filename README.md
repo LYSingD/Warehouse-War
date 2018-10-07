@@ -22,8 +22,6 @@ End with an example of getting some data out of the system or using it for a lit
 
 * [HTML](https://developer.mozilla.org/kab/docs/Web/HTML)
 * [CSS](https://developer.mozilla.org/kab/docs/Web/CSS)
-* [Bootstrap](https://getbootstrap.com)
-* [JQuery](https://jquery.com)
 * [NodeJS](https://nodejs.org)
 * [ExpressJS](https://expressjs.com)
 * [MongoDB](https://www.mongodb.com)
